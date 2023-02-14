@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/bitacora-digital/static/css/main.3a9b5129.css",
+    "main.js": "/bitacora-digital/static/js/main.29260416.js",
+    "static/media/blistera_1.jpg": "/bitacora-digital/static/media/blistera_1.ccfb2c46846f99793f40.jpg",
+    "static/media/vblender_1.png": "/bitacora-digital/static/media/vblender_1.3840e0bd51d42ce101be.png",
+    "static/media/bombo_glatt.jpg": "/bitacora-digital/static/media/bombo_glatt.0d2280733f024d1e519d.jpg",
+    "static/media/poppins-all-400-normal.woff": "/bitacora-digital/static/media/poppins-all-400-normal.6fbfdac99c274b77fe96.woff",
+    "static/media/tecnomaco.jpg": "/bitacora-digital/static/media/tecnomaco.79a17a585819979c2155.jpg",
+    "static/media/encapsuladora.jpg": "/bitacora-digital/static/media/encapsuladora.a16607abf8cfaa873e56.jpg",
+    "static/media/Prexima-800.jpg": "/bitacora-digital/static/media/Prexima-800.60c08dda742aa5398f45.jpg",
+    "static/media/poppins-devanagari-400-normal.woff2": "/bitacora-digital/static/media/poppins-devanagari-400-normal.64d5f06ee726edd58ca3.woff2",
+    "static/media/lecho_glatt.jpg": "/bitacora-digital/static/media/lecho_glatt.e6b980fdda07d8d1bbf1.jpg",
+    "static/media/ktp_420.jpg": "/bitacora-digital/static/media/ktp_420.4195036d720684a7b869.jpg",
+    "static/media/poppins-latin-400-normal.woff2": "/bitacora-digital/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
+    "static/media/poppins-latin-ext-400-normal.woff2": "/bitacora-digital/static/media/poppins-latin-ext-400-normal.4f38b4331448d2313adc.woff2",
+    "index.html": "/bitacora-digital/index.html",
+    "main.3a9b5129.css.map": "/bitacora-digital/static/css/main.3a9b5129.css.map",
+    "main.29260416.js.map": "/bitacora-digital/static/js/main.29260416.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a9b5129.css",
+    "static/js/main.29260416.js"
+  ]
+}
