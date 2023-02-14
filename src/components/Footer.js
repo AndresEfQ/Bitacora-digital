@@ -23,7 +23,7 @@ const StyledA = styled.a`
 class Footer extends React.Component {
   render () {
     return (
-      <StyledFooter>Copyright © <StyledA href="https://github.com/AndresEfQ">AndresEfQ 2023 <FaGithub /></StyledA></StyledFooter>
+      <StyledFooter>Copyright © <StyledA href="https://github.com/AndresEfQ/Bitacora-digital">AndresEfQ 2023 <FaGithub /></StyledA></StyledFooter>
     )
   }
 }

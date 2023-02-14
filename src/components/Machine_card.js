@@ -25,7 +25,7 @@ class MachineCard extends React.Component {
     return (
       <StyledDiv>
         <h3>{this.props.name}</h3>
-        <img src={this.props.img} alt={this.props.name} width="300px" height="200px"/>
+        <img src={this.props.img} alt={this.props.name} width="300px" height="300px"/>
         <div>
           <button>Bitácora de uso</button>
           <button>Bitácora de limpieza</button>
