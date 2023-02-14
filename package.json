@@ -1,7 +1,7 @@
 {
   "name": "bitacora-digital",
   "version": "0.1.0",
-  "homepage": "https://andresefq.github.io/Bitacora-digital/",
+  "homepage": "https://andresefq.github.io/bitacora-digital/",
   "private": true,
   "dependencies": {
     "@fontsource/inter": "^4.5.15",
