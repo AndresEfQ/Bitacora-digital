@@ -4,7 +4,7 @@ This project is intended to solve a real problem in my workplace, currently the 
 
 This app allows the operators to log every use and cleaning process, easing the data input and avoiding documentation errors. Supervisors may check every machine in a single app, easily find out every machine status and which machines require cleaning. Regulatory entities, both internal and external to the company may have an easy way to audit every machine log.
 
-[:point_right: Live Demo :point_left:](https://andresefq.github.io/bitacora-digital/)
+[:point_right: Live Demo :point_left:](https://andresefq.github.io/Bitacora-digital/)
 
 ## Getting started
 
