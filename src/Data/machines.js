@@ -1,32 +1,18 @@
 import blistera1 from "../images/blistera_1.jpg";
+import lecho from "../images/lecho_glatt.jpg";
 import bomboGlatt from "../images/bombo_glatt.jpg";
 import encapsuladora from "../images/encapsuladora.jpg";
 import ktp420 from "../images/ktp_420.jpg";
 import mezcladorV1 from "../images/vblender_1.png";
 import mezcladorV2 from "../images/Mezclador_V.jpeg";
 import prexima800 from "../images/Prexima-800.jpg";
-import tecnomaco from "../images/tecnomaco.jpg"
+import tecnomaco from "../images/tecnomaco.jpg";
 
 const machines = [
   {
-    name: "Blistera 1",
+    name: "Lecho Glatt",
     state: "Limpio",
-    img: blistera1,
-  },
-  {
-    name: "Bombo Glatt",
-    state: "Limpio",
-    img: bomboGlatt,
-  },
-  {
-    name: "Encapsuladora",
-    state: "Limpio",
-    img: encapsuladora,
-  },
-  {
-    name: "Tableteadora KTP-420",
-    state: "Limpio",
-    img: ktp420,
+    img: lecho
   },
   {
     name: "Mezclador en V1",
@@ -39,9 +25,29 @@ const machines = [
     img: mezcladorV2,
   },
   {
+    name: "Tableteadora KTP-420",
+    state: "Limpio",
+    img: ktp420,
+  },
+  {
     name: "Tableteadora Prexima 800",
     state: "Limpio",
     img: prexima800,
+  },
+  {
+    name: "Encapsuladora",
+    state: "Limpio",
+    img: encapsuladora,
+  },
+  {
+    name: "Bombo Glatt",
+    state: "Limpio",
+    img: bomboGlatt,
+  },
+  {
+    name: "Blistera 1",
+    state: "Limpio",
+    img: blistera1,
   },
   {
     name: "Envasadora Tecnomaco",
