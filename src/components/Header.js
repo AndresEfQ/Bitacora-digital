@@ -7,17 +7,17 @@ const StyledHeader = styled.header`
   color: rgb(255, 255, 255);
   font-family: "Poppins", serif;
   font-weight: 900;
-  font-size: 3em;
-  text-align: center;
+  font-size: 2.5em;
   height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
-class Header extends React.Component {
-  render () {
-    return (
-      <StyledHeader>Bitácora Digital</StyledHeader>
-    )
-  }
+const Header = () => {
+  return (
+    <StyledHeader>Bitácora Digital</StyledHeader>
+  )
 }
 
 export default Header;

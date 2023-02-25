@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import MachineCard from "./Machine_card";
+import MachineCard from "./MachineCard";
 import machines from "../Data/machines";
 
 const StyledMain = styled.main`
@@ -11,15 +11,37 @@ const StyledMain = styled.main`
   padding: 20px;
 `;
 
-class Main extends React.Component {
+const Main = () => {
 
-  render () {
-    return (
-      <StyledMain>
-        {machines.map((machine) => <MachineCard name={machine.name} img={machine.img}/>)}
-      </StyledMain>
-    )
+  const handleImgClick = () => {
+    //react-router?
   }
+
+  const handleUseLog = () => {
+
+  }
+
+  const handleCelaningLog = () => {
+
+  }
+
+  return (
+    <StyledMain>
+      {machines.map((machine) => {
+        return (
+          <MachineCard 
+            name={machine.name} 
+            img={machine.img} 
+            status={machine.status} 
+            lastCleanedDate={machine.lastCleanedDate}
+            handleImgClick={handleImgClick}
+            handleUseLog={handleUseLog}
+            handleCelaningLog={handleCelaningLog}
+          />
+        )
+      })}
+    </StyledMain>
+  )
 }
 
 export default Main;
