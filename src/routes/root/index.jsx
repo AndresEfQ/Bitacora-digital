@@ -8,6 +8,13 @@ import { Header, Main } from "./style";
 import { useState } from "react";
 import Menu from "../../components/menu";
 import Footer from "../../components/footer";
+import CardsContainer from "../../components/cardsContainer";
+
+//has to be replaced with data from database
+import machines from "../../Data/machines"; 
+import mobile from "../../Data/mobile";
+import areas from "../../Data/areas";
+import accesories from "../../Data/accesories";
 
 export default function Root() {
 
@@ -30,13 +37,21 @@ export default function Root() {
       <Menu visible={showMenu} closeMenu={handleShowMenu}/>
       <Main>
         <h2>Equipos Fijos</h2>
-        <div></div>
+        <div>
+          <CardsContainer cards={machines} />
+        </div>
         <h2>Equipos Móviles</h2>
-        <div></div>
+        <div>
+          <CardsContainer cards={mobile} />
+        </div>
         <h2>Areas</h2>
-        <div></div>
+        <div>
+          <CardsContainer cards={areas} />
+        </div>
         <h2>Utensilios</h2>
-        <div></div>
+        <div>
+          <CardsContainer cards={accesories} />
+        </div>
       </Main>
 
       <Outlet />
