@@ -7,6 +7,7 @@ export default function cardContainer(props) {
     name={card.name}
     status={card.status} 
     lastCleanedDate={card.lastCleanedDate}
+    cleaningFreq={card.cleaningFreq}
   />)
 
   return (

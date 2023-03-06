@@ -10,6 +10,7 @@ export const StyledDiv = styled.div`
   position: absolute;
   transition: background-color 300ms ease-out;
   pointer-events: ${props => props.visible ? 'all' : 'noe'};
+  z-index: 2;
   
   & > div {
     position: relative;

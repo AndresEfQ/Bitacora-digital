@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import "@fontsource/poppins"
+import "@fontsource/inter"
 
 export default createGlobalStyle`
 * {
@@ -14,7 +14,7 @@ export default createGlobalStyle`
 }
 
 html, body {
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   height: 100%;
 }
 

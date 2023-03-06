@@ -29,6 +29,7 @@ export const Main = styled.main`
   color: #666;
 
   & > h2 {
+    padding: 0.5rem;
     font-size: 1rem;
     border-bottom: 1px solid #ccc;
   }
