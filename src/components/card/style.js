@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const statusColors = {
-  process: "#4dd390",
+  process: "#1ca962",
   cleaning: "#4d88d3",
   clean: "#fff",
   maintenance: "#d34d4d",
@@ -9,35 +9,88 @@ const statusColors = {
 }
 
 export const Container = styled.div`
+  height: ${props => props.open ? "10rem" : "6.1rem"};
+  overflow-y: hidden;
   font-size: 14px;
   margin: 1rem;
   padding: 1rem;
-  gap: 1rem;
   background-color: #eee;
   box-shadow: 1px 1px 10px -4px #000;
   border-radius: 5px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  transition: height 300ms ease-out;
 
-  & > div {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
+  & > div:first-child {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 55% 25%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
 
-  & > div:nth-child(2) {
-    flex: 1;
+    & > div {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    & > div:nth-child(2) > h3, div:first-of-type {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    & > div:last-child {
+      align-self: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+  
+      & > div {
+        display: flex;
+        flex-direction: row;
+        gap: 0.8rem;
+      }
+    }
   }
 
   & > div:last-child {
-    gap: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  & button {
+    background-color: #009ba5;
+    box-shadow: 0 0 10px -2px #000;
+    border: none;
+    border-radius: 5px;
+    padding: 0.2rem 0.2rem 0 0.2rem;
+  }
+
+  #action-button {
+    font-family: inherit;
+    font-weight: bold;
+    padding: 0.55rem 2rem;
+    color: #ddd;
+  }
+
+  & > div > button {
+    transition: opacity 300ms ease-out, transform 300ms ease-out 50ms;
+    opacity: ${props => props.open ? "1" : "0"};
+    transform: ${props => props.open ? "scaleY(1)" : "scaleY(0.5)"};
+    transform-origin: top;
   }
 
   progress {
     margin-top: 10px;
     border: none; 
-    width: 100%;
+    width: 92%;
     height: 5px;
+    margin-left: 3%;
   }
 
   progress::-webkit-progress-bar {
@@ -67,8 +120,10 @@ export const StatusIndicator = styled.div`
   width: 30px;
   border-radius: 50%;
   background-color: ${props => statusColors[props.status]};
-  box-shadow: 0 0 10px -5px #000;
+  box-shadow: 0 0 10px -2px #000;
   position: relative;
+  transition: transform 300ms ease-out;
+  transform: ${props => props.open ? "rotate(180deg)" : "rotate(0deg)"};
 
   &:before {
     content: "";

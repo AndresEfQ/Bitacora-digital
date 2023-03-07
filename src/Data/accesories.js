@@ -64,7 +64,7 @@ const accesories = [
   },
   {
     id: 'AF-0330',
-    name: 'Correa de acero inoxidable',
+    name: 'Correa de acero inoxidable graduada',
     status: 'clean',
     lastCleanedDate: new Date('2023-02-14'),
     assetCode: 'AF-0330',

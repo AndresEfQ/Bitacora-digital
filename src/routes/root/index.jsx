@@ -3,7 +3,7 @@ import {
   AiOutlineSearch,
   AiOutlineSetting,
 } from "react-icons/ai";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { Header, Main } from "./style";
 import { useState } from "react";
 import Menu from "../../components/menu";
@@ -38,22 +38,33 @@ export default function Root() {
       <Main>
         <h2>Equipos Fijos</h2>
         <div>
-          <CardsContainer cards={machines} />
+          <CardsContainer
+            id="machines"
+            cards={machines}
+          />
         </div>
         <h2>Equipos Móviles</h2>
         <div>
-          <CardsContainer cards={mobile} />
+          <CardsContainer 
+            id="mobile"
+            cards={mobile} 
+          />
         </div>
         <h2>Areas</h2>
         <div>
-          <CardsContainer cards={areas} />
+          <CardsContainer
+            id="areas"
+            cards={areas} 
+          />
         </div>
         <h2>Utensilios</h2>
         <div>
-          <CardsContainer cards={accesories} />
+          <CardsContainer
+            id="accesories"
+            cards={accesories} 
+          />
         </div>
       </Main>
-
       <Outlet />
       <Footer />
     </>
