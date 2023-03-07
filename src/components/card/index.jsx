@@ -42,7 +42,7 @@ export default function Card(props) {
   return (
     <Container 
       cleanTimeRemaining={cleanTimeRemaining} 
-      onClick={() => props.handleSetOpenCard(props.id)}
+      onClick={() => props.handleSetOpenCardId(props.id)}
       open={props.isOpen}
     >
       <div>

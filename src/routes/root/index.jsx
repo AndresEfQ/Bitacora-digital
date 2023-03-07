@@ -20,8 +20,20 @@ export default function Root() {
 
   const [showMenu, setShowMenu] = useState(false);
 
+  const[openCardId, setOpenCardId] = useState('');
+  
   const handleShowMenu = () => {
     setShowMenu(prev => !prev)
+  }
+
+  const handleSetOpenCardId = (cardId) => {
+    setOpenCardId(cardId);
+  }
+
+  const handleCloseCard = (e) => {
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
+    setOpenCardId('');
   }
 
   return (
@@ -41,6 +53,9 @@ export default function Root() {
           <CardsContainer
             id="machines"
             cards={machines}
+            openCardId={openCardId}
+            handleSetOpenCardId={handleSetOpenCardId}
+            handleCloseCard={handleCloseCard}
           />
         </div>
         <h2>Equipos Móviles</h2>
@@ -48,6 +63,9 @@ export default function Root() {
           <CardsContainer 
             id="mobile"
             cards={mobile} 
+            openCardId={openCardId}
+            handleSetOpenCardId={handleSetOpenCardId}
+            handleCloseCard={handleCloseCard}
           />
         </div>
         <h2>Areas</h2>
@@ -55,6 +73,9 @@ export default function Root() {
           <CardsContainer
             id="areas"
             cards={areas} 
+            openCardId={openCardId}
+            handleSetOpenCardId={handleSetOpenCardId}
+            handleCloseCard={handleCloseCard}
           />
         </div>
         <h2>Utensilios</h2>
@@ -62,6 +83,9 @@ export default function Root() {
           <CardsContainer
             id="accesories"
             cards={accesories} 
+            openCardId={openCardId}
+            handleSetOpenCardId={handleSetOpenCardId}
+            handleCloseCard={handleCloseCard}
           />
         </div>
       </Main>

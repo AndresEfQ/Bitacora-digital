@@ -3,18 +3,17 @@ import Card from "../card"
 
 export default function CardContainer(props) {
 
-  const[openCard, setOpenCard] = useState();
+  /* const[openCard, setOpenCard] = useState(); */
 
-  const handleSetOpenCard = (cardId) => {
+  /* const handleSetOpenCard = (cardId) => {
     setOpenCard(cardId);
-  }
+  } */
 
-  const handleCloseCard = (e) => {
+  /* const handleCloseCard = (e) => {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
     setOpenCard('');
-    console.log(openCard);
-  }
+  } */
 
   const cards = props.cards.map(card => <Card 
     key={card.id}
@@ -25,9 +24,9 @@ export default function CardContainer(props) {
     lot={card.lot}
     lastCleanedDate={card.lastCleanedDate}
     cleaningFreq={card.cleaningFreq}
-    isOpen={openCard === card.id}
-    handleSetOpenCard={handleSetOpenCard}
-    handleCloseCard={handleCloseCard}
+    isOpen={props.openCardId === card.id}
+    handleSetOpenCardId={props.handleSetOpenCardId}
+    handleCloseCard={props.handleCloseCard}
   />)
 
   return (
