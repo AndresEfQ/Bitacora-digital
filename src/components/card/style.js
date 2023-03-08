@@ -78,7 +78,7 @@ export const Container = styled.div`
     color: #ddd;
   }
 
-  & > div > button {
+  & > div > button, #action-button {
     transition: opacity 300ms ease-out, transform 300ms ease-out 50ms;
     opacity: ${props => props.open ? "1" : "0"};
     transform: ${props => props.open ? "scaleY(1)" : "scaleY(0.5)"};

@@ -3,12 +3,11 @@ import styled from "styled-components";
 export const StyledDiv = styled.div`
   width: 100%;
   background-color: ${props => props.visible? 
-    'rgba(0,0,0,0.7)' :
+    'rgba(0,0,0,0.9)' :
     'rgba(255, 255, 255, 0)'};
   color: #666;
-  height: 95vh;
+  height: 100vh;
   position: absolute;
-  transition: background-color 300ms ease-out;
   pointer-events: ${props => props.visible ? 'all' : 'none'};
   z-index: 3;
   

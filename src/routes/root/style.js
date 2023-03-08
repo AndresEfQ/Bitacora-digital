@@ -2,6 +2,9 @@ import styled from "styled-components";
 import "@fontsource/poppins";
 
 export const Header = styled.header`
+  position: fixed;
+  top: 0;
+  width: 100%;
   height: 5vh;
   padding: 1vh 2vh;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -10,6 +13,7 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 4;
 
   h1 {
     font-size: 1.2rem
@@ -26,7 +30,11 @@ export const Header = styled.header`
 `;
 
 export const Main = styled.main`
+  margin-top: 5vh;
+  padding-bottom: 5vh;
   color: #666;
+  height: 100%;
+  overflow: hidden;
 
   & > h2 {
     padding: 0.5rem;

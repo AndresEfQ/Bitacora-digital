@@ -1,3 +1,4 @@
+import { useDisableScroll } from "../../customHooks/useDisableScroll";
 import { StyledDiv } from "./style";
 import { 
   AiOutlineClose, 
@@ -9,6 +10,9 @@ import {
 import { BiCycling } from "react-icons/bi";
 
 export default function Menu(props) {
+
+  useDisableScroll({ element: document.body, disabled: props.visible })
+
   return (
     <>
       <StyledDiv visible={props.visible} hiddenSyncIcon={true}>

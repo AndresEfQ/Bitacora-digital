@@ -1,16 +1,31 @@
-import React from "react";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useLocation,
+} from "react-router-dom";
+import GlobalStyle from './styles/global';
+import Root from "./routes/root";
+import Modal from "./routes/modal";
 
-function App() {
+export default function App() {
+  
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Root />,
+      children: [
+        {
+          path: "/:cardId",
+          element: <Modal />
+        }
+      ]
+    }
+  ])
+
   return (
-    <div className="App">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
-  );
+    <>
+      <RouterProvider router={router} />
+      <GlobalStyle />
+    </>
+  )
 }
-
-export default App;

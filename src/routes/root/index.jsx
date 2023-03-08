@@ -1,11 +1,11 @@
+import { useState } from "react";
+import { Outlet, Link } from "react-router-dom";
 import { 
   AiOutlineMenu, 
   AiOutlineSearch,
   AiOutlineSetting,
 } from "react-icons/ai";
-import { Outlet } from "react-router-dom";
 import { Header, Main } from "./style";
-import { useState } from "react";
 import Menu from "../../components/menu";
 import Footer from "../../components/footer";
 import CardsContainer from "../../components/cardsContainer";
@@ -39,7 +39,9 @@ export default function Root() {
   return (
     <>
       <Header>
-        <AiOutlineMenu size={25} color="white" onClick={handleShowMenu} />
+        <Link to="/">
+          <AiOutlineMenu size={25} color="white" onClick={handleShowMenu} />
+        </Link>
         <h1>Bitácora Digital</h1>
         <div>
           <AiOutlineSetting size={25} color="white" />

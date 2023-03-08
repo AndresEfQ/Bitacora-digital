@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { GiGears, GiBroom } from "react-icons/gi";
 import { BsTools } from "react-icons/bs";
 import { CgClose } from "react-icons/cg";
@@ -75,7 +76,9 @@ export default function Card(props) {
         </div>
       </div>
       <div>
-        <button id="action-button">{statusInfo[props.status].action}</button>
+        <Link to={props.id}>
+          <button id="action-button">{statusInfo[props.status].action}</button>
+        </Link>
         <button><BsTools size={27} color="#ddd" /></button>
         <button onClick={(e) => props.handleCloseCard(e)}>
           <CgClose size={27} color="#ddd" />

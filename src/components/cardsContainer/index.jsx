@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Card from "../card"
 
 export default function CardContainer(props) {
@@ -18,7 +17,7 @@ export default function CardContainer(props) {
   const cards = props.cards.map(card => <Card 
     key={card.id}
     id={card.id}
-    props={card.name}
+    name={card.name}
     status={card.status}
     product={card.product}
     lot={card.lot}
