@@ -5,11 +5,13 @@ export const StyledDiv = styled.div`
   background-color: ${props => props.visible? 
     'rgba(0,0,0,0.9)' :
     'rgba(255, 255, 255, 0)'};
+  opacity: ${props => props.visible ? '1' : '0'};
   color: #666;
   height: 100vh;
   position: absolute;
   pointer-events: ${props => props.visible ? 'all' : 'none'};
   z-index: 3;
+  transition: opacity 400ms ease-out;
   
   & > div {
     position: relative;
@@ -17,7 +19,7 @@ export const StyledDiv = styled.div`
     background-color: #eee;
     opacity: 1;
     width: 70%;
-    transition: left 300ms ease-out;
+    transition: left 400ms ease-out;
     
     & div {
       border-bottom: 1px solid #ccc;

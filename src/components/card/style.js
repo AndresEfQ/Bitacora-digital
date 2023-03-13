@@ -9,7 +9,7 @@ const statusColors = {
 }
 
 export const Container = styled.div`
-  height: ${props => props.open ? "10rem" : "6.1rem"};
+  height: ${props => props.open ? "20rem" : "6.1rem"};
   overflow-y: hidden;
   font-size: 14px;
   margin: 1rem;
@@ -21,7 +21,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: stretch;
   gap: 1rem;
-  transition: height 300ms ease-out;
 
   & > div:first-child {
     width: 100%;
@@ -55,7 +54,20 @@ export const Container = styled.div`
       }
     }
   }
-
+  & > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    border-radius: 3px;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;    
+  }
+  svg {
+    align-self: flex-end;
+  }
   & > div:last-child {
     display: flex;
     justify-content: center;

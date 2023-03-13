@@ -1,10 +1,5 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useDisableScroll } from "../../customHooks/useDisableScroll";
-import ProcessModal from "../../components/processModal";
-import CleaningModal from "../../components/CleaningModal";
-import CleanModal from "../../components/CleanModal";
-import MaintenanceModal from "../../components/maintenanceModal";
-import ToBeCleanedModal from "../../components/toBeCleanedModal";
 import { StyledDiv } from "./style";
 
 // change import to fetch data from database
@@ -31,18 +26,23 @@ export default function Modal() {
   }
 
   const modalContent = {
-    process: <ProcessModal />,
-    cleaning: <CleaningModal />,
-    clean: <CleanModal />,
-    maintenance: <MaintenanceModal />,
-    toBeCleaned: <ToBeCleanedModal />,
+    process: {title: "En Proceso", message: "¿Desea finalizar el proceso?"},
+    cleaning: {title: "En Limpieza", message: "¿Desea finalizar la limpieza? \nRealice una inspección visual detallada del equipo o el área, y solicite la inspección visual al Jefe de Producción, QF Supervisor de Producción o al Auxiliar de Producción"},
+    clean: {title: "Limpio", message: "¿Desea iniciar proceso?"},
+    maintenance: {title: "En Mantenimiento", message: `¿Está seguro que desea recibir el equipo de mantenimiento? \nSolicite al Jefe de Producción o al QF Supervisor de Producción que verifique que el equipo se encuentre completamente armado y que el área de Validaciones haya verificado el estado calificado del equipo si aplica.`},
+    toBeCleaned: {title: "Pendiente de Limpieza", message: "¿Desea iniciar la limpieza?"},
   }
 
   return (
     <StyledDiv>
       <div>
         <h2>{card.name}</h2>
-        {modalContent[card.status]}
+        <h3>{modalContent[card.status].title}</h3>
+        {modalContent[card.status].message.split('\n').map(text => <p>{text}</p>)}
+        <div>
+          <Link to=""><button>Aceptar</button></Link>
+          <Link to="/"><button>Cancelar</button></Link>
+      </div>
       </div>
     </StyledDiv>
   )

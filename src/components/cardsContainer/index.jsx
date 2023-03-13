@@ -16,13 +16,7 @@ export default function CardContainer(props) {
 
   const cards = props.cards.map(card => <Card 
     key={card.id}
-    id={card.id}
-    name={card.name}
-    status={card.status}
-    product={card.product}
-    lot={card.lot}
-    lastCleanedDate={card.lastCleanedDate}
-    cleaningFreq={card.cleaningFreq}
+    card={card}
     isOpen={props.openCardId === card.id}
     handleSetOpenCardId={props.handleSetOpenCardId}
     handleCloseCard={props.handleCloseCard}
